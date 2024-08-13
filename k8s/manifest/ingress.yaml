@@ -5,10 +5,11 @@ metadata:
   # namespace: go-web-app
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+
 spec:
   ingressClassName: nginx
   rules:
-  - host: "go-web-app.local"
+  - host: "faisalmalik.in"
     http:
       paths:
       - pathType: Prefix
