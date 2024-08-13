@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: go-web-app
+  name: go-web-app
+  #  namespace: go-web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: go-web-app
+  template:
+    metadata:
+      labels:
+        app: go-web-app
+    spec:
+      containers:
+      - image: faisalmaliik/go-web-app:v3
+        name: go-web-app
+        ports:
+          - containerPort: 8080
